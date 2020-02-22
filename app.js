@@ -5,12 +5,7 @@ const app = express();
 require('./config/express')(app);
 
 // Create Text to Speech client.
-let client;
-try {
-  client = new TextToSpeechV1({});
-} catch (err) {
-  console.error('Error creating service client: ', err);
-}
+let client = new TextToSpeechV1({});
 
 app.get('/', (_, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
