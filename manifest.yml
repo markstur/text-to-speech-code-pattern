@@ -1,7 +1,7 @@
 ---
 declared-services:
     ttscp-text-to-speech:
-        label: text-to-speech
+        label: text_to_speech
         plan: lite
 applications:
 - path: .
